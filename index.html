@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vonk Digital — Reports</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --obsidian-black:   #131316;
+    --kova-azure:       #0E86F5;
+    --kova-cyan:        #22D3EE;
+    --kova-emerald:     #34D399;
+    --royal-blue:       #0E86F5;
+    --vivid-violet:     #22D3EE;
+    --neon-lime:        #34D399;
+    --card-bg:          #1A1A1F;
+    --card-border:      #262630;
+    --text-primary:     #EAEAEA;
+    --text-secondary:   #888888;
+    --text-muted:       #555555;
+    --divider:          #2A2A30;
+    --positive-glow:    rgba(52,211,153,0.15);
+    --blue-glow:        rgba(14,134,245,0.25);
+    --cyan-glow:        rgba(34,211,238,0.18);
+    --violet-glow:      rgba(34,211,238,0.18);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background: var(--obsidian-black);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER BAR ── */
+  .report-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .report-header .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .report-header .brand-name {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+  }
+  .report-header .brand-sub {
+    font-weight: 500;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+  .report-header .report-meta {
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+
+  /* ── SECTION TITLES ── */
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-primary);
+  }
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    line-height: 1.15;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--kova-azure);
+    display: inline-block;
+  }
+  h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    letter-spacing: 0.18em;
+  }
+
+  /* ── HEADLINE + DESCRIPTION PAIRING ── */
+  .section-desc {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    text-transform: none;
+    letter-spacing: normal;
+    max-width: 640px;
+  }
+  h1 + .section-desc { margin-top: 4px; }
+  h2 + .section-desc { margin-top: -8px; }
+
+  /* ── SECTION LABELS (small category markers) ── */
+  .section-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--kova-cyan);
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+
+  /* ── KPI ROW ── */
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .kpi-box {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .kpi-box .kpi-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+  .kpi-box .kpi-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--kova-azure);
+  }
+  .kpi-box .kpi-delta {
+    font-size: 0.75rem;
+    margin-top: 4px;
+  }
+  .kpi-delta.positive { color: var(--kova-emerald); }
+  .kpi-delta.negative { color: var(--text-secondary); }
+
+  /* ── TABLES ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  thead th {
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    padding: 10px 12px;
+    border-bottom: 2px solid var(--divider);
+  }
+  tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--card-border);
+    color: var(--text-primary);
+  }
+  tbody tr:hover { background: rgba(255,255,255,0.02); }
+
+  /* Accent values in tables */
+  .val-blue   { color: var(--kova-azure); font-weight: 600; }
+  .val-violet { color: var(--kova-cyan); font-weight: 600; }
+  .val-cyan   { color: var(--kova-cyan); font-weight: 600; }
+  .val-green  { color: var(--kova-emerald); font-weight: 600; }
+  .val-muted  { color: var(--text-secondary); font-weight: 600; }
+
+  /* ── BADGES / TAGS ── */
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .badge-blue   { background: var(--blue-glow); color: var(--kova-azure); }
+  .badge-violet { background: var(--cyan-glow); color: var(--kova-cyan); }
+  .badge-cyan   { background: var(--cyan-glow); color: var(--kova-cyan); }
+  .badge-green  { background: var(--positive-glow); color: var(--kova-emerald); }
+  .badge-muted  { background: rgba(255,255,255,0.05); color: var(--text-secondary); }
+
+  /* ── UTILITY ── */
+  .text-blue    { color: var(--kova-azure); }
+  .text-violet  { color: var(--kova-cyan); }
+  .text-cyan    { color: var(--kova-cyan); }
+  .text-green   { color: var(--kova-emerald); }
+  .text-muted   { color: var(--text-muted); }
+  .text-right   { text-align: right; }
+  .mt-1 { margin-top: 8px; }
+  .mt-2 { margin-top: 16px; }
+  .mt-3 { margin-top: 24px; }
+  .mb-1 { margin-bottom: 8px; }
+  .mb-2 { margin-bottom: 16px; }
+  .mb-3 { margin-bottom: 24px; }
+
+  /* ── FOOTER ── */
+  .report-footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--divider);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── GLOW EFFECTS ── */
+  .glow-blue   { text-shadow: 0 0 10px rgba(14,134,245,0.6); }
+  .glow-cyan   { text-shadow: 0 0 8px rgba(34,211,238,0.6); }
+  .glow-violet { text-shadow: 0 0 8px rgba(34,211,238,0.6); }
+
+  /* ── PRINT / PDF ── */
+  @media print {
+    body { background: #131316; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+<div class="report-header">
+  <div class="brand-logo">
+    <svg viewBox="0 0 36 36" width="36" height="36">
+  <rect x="0" y="0" width="36" height="36" rx="7" fill="#0D0D14" stroke="rgba(34,211,238,0.10)" stroke-width="1"/>
+  <defs><linearGradient id="kcGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0E86F5"/><stop offset="100%" style="stop-color:#22D3EE"/></linearGradient></defs>
+  <text x="18" y="25" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="900" font-size="16" letter-spacing="-0.5" fill="url(#kcGrad)">KC</text>
+</svg>
+    <div>
+      <div class="brand-name">Kova</div>
+      <div class="brand-sub">Commerce</div>
+    </div>
+  </div>
+  <div class="report-meta">
+    <div style="font-weight:600; color:var(--text-primary);">Performance Reports</div>
+    <div>Vonk Digital</div>
+    <div>June 2, 2026</div>
+  </div>
+</div>
+  <h1>Vonk Digital — Reports</h1>
+  <div class="section-desc">Weekly (Mon–Sun PT) and monthly performance summaries: paid spend across Meta + Google Ads, booked calls from Calendly, sign-ups from the subscription tracker, and top-performing creatives by booked call.</div>
+
+  <h2>Latest</h2>
+  <div class="kpi-row">
+    <div class="kpi-box">
+      <div class="kpi-label">Most Recent Week</div>
+      <div class="kpi-value"><a href="weekly/vonk-weekly-2026-05-25-to-2026-05-31.html" style="color:var(--kova-azure);text-decoration:none;">May 25 – May 31, 2026 →</a></div>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-label">Most Recent Month</div>
+      <div class="kpi-value"><a href="monthly/vonk-monthly-2026-05.html" style="color:var(--kova-azure);text-decoration:none;">May 2026 →</a></div>
+    </div>
+  </div>
+
+  <h2>Weekly Archive</h2>
+  <ul class="report-list"><li><a href="weekly/vonk-weekly-2026-05-25-to-2026-05-31.html">May 25 – May 31, 2026</a></li></ul>
+
+  <h2>Monthly Archive</h2>
+  <ul class="report-list"><li><a href="monthly/vonk-monthly-2026-05.html">May 2026</a></li></ul>
+
+  
+<div class="report-footer">
+  <span>Kova Commerce</span>
+  <span>kovacommerce.ai</span>
+  <span>Confidential</span>
+</div>
+</div>
+
+<style>
+  .report-list { list-style: none; padding: 0; }
+  .report-list li { padding: 10px 16px; border-bottom: 1px solid var(--card-border); }
+  .report-list a { color: var(--kova-azure); text-decoration: none; font-weight: 500; }
+  .report-list a:hover { text-decoration: underline; }
+</style>
+</body>
+</html>
