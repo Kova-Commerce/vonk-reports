@@ -310,6 +310,27 @@
   </div>
 </div>
   
+<h2>Last 12 Months — Monthly Trend</h2>
+<div class="section-desc">Monthly Net Booked Calls and unique Sign-ups for the 12 months ending with this reporting month. Source: Calendly + subscription sheet.</div>
+
+<svg viewBox="0 0 880 320" width="100%" style="display:block;max-width:880px;margin:8px 0 4px;font-family:'Montserrat',sans-serif;">
+  <line x1="50" y1="260" x2="856" y2="260" stroke="#262630" stroke-width="1"/>
+            <text x="42" y="264" text-anchor="end" font-size="11" fill="#888888">0</text><line x1="50" y1="201" x2="856" y2="201" stroke="#262630" stroke-width="1"/>
+            <text x="42" y="205" text-anchor="end" font-size="11" fill="#888888">25</text><line x1="50" y1="142" x2="856" y2="142" stroke="#262630" stroke-width="1"/>
+            <text x="42" y="146" text-anchor="end" font-size="11" fill="#888888">50</text><line x1="50" y1="83" x2="856" y2="83" stroke="#262630" stroke-width="1"/>
+            <text x="42" y="87" text-anchor="end" font-size="11" fill="#888888">75</text><line x1="50" y1="24" x2="856" y2="24" stroke="#262630" stroke-width="1"/>
+            <text x="42" y="28" text-anchor="end" font-size="11" fill="#888888">100</text>
+  <path d="M 50.0 260.0 L 123.3 260.0 L 196.5 260.0 L 269.8 260.0 L 343.1 260.0 L 416.4 243.5 L 489.6 196.3 L 562.9 137.3 L 636.2 201.0 L 709.5 196.3 L 782.7 208.1 L 856.0 175.0" stroke="#0E86F5" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/><circle cx="50.0" cy="260.0" r="3" fill="#0E86F5"/><circle cx="123.3" cy="260.0" r="3" fill="#0E86F5"/><circle cx="196.5" cy="260.0" r="3" fill="#0E86F5"/><circle cx="269.8" cy="260.0" r="3" fill="#0E86F5"/><circle cx="343.1" cy="260.0" r="3" fill="#0E86F5"/><circle cx="416.4" cy="243.5" r="3" fill="#0E86F5"/><circle cx="489.6" cy="196.3" r="3" fill="#0E86F5"/><circle cx="562.9" cy="137.3" r="3" fill="#0E86F5"/><circle cx="636.2" cy="201.0" r="3" fill="#0E86F5"/><circle cx="709.5" cy="196.3" r="3" fill="#0E86F5"/><circle cx="782.7" cy="208.1" r="3" fill="#0E86F5"/><circle cx="856.0" cy="175.0" r="3" fill="#0E86F5"/>
+  <path d="M 50.0 260.0 L 123.3 260.0 L 196.5 260.0 L 269.8 260.0 L 343.1 260.0 L 416.4 257.6 L 489.6 205.7 L 562.9 208.1 L 636.2 219.9 L 709.5 227.0 L 782.7 231.7 L 856.0 241.1" stroke="#22D3EE" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/><circle cx="50.0" cy="260.0" r="3" fill="#22D3EE"/><circle cx="123.3" cy="260.0" r="3" fill="#22D3EE"/><circle cx="196.5" cy="260.0" r="3" fill="#22D3EE"/><circle cx="269.8" cy="260.0" r="3" fill="#22D3EE"/><circle cx="343.1" cy="260.0" r="3" fill="#22D3EE"/><circle cx="416.4" cy="257.6" r="3" fill="#22D3EE"/><circle cx="489.6" cy="205.7" r="3" fill="#22D3EE"/><circle cx="562.9" cy="208.1" r="3" fill="#22D3EE"/><circle cx="636.2" cy="219.9" r="3" fill="#22D3EE"/><circle cx="709.5" cy="227.0" r="3" fill="#22D3EE"/><circle cx="782.7" cy="231.7" r="3" fill="#22D3EE"/><circle cx="856.0" cy="241.1" r="3" fill="#22D3EE"/>
+  <text x="50" y="278" text-anchor="middle" font-size="11" fill="#888888">Jun</text><text x="196.54545454545453" y="278" text-anchor="middle" font-size="11" fill="#888888">Aug</text><text x="343.09090909090907" y="278" text-anchor="middle" font-size="11" fill="#888888">Oct</text><text x="489.6363636363636" y="278" text-anchor="middle" font-size="11" fill="#888888">Dec</text><text x="636.1818181818181" y="278" text-anchor="middle" font-size="11" fill="#888888">Feb</text><text x="782.7272727272727" y="278" text-anchor="middle" font-size="11" fill="#888888">Apr</text><text x="856" y="278" text-anchor="middle" font-size="11" fill="#888888">May</text>
+  <g transform="translate(50, 16)">
+    <circle cx="6" cy="-2" r="4" fill="#0E86F5"/>
+    <text x="16" y="2" font-size="11" fill="#EAEAEA">Booked Calls (Net)</text>
+    <circle cx="160" cy="-2" r="4" fill="#22D3EE"/>
+    <text x="170" y="2" font-size="11" fill="#EAEAEA">Sign-ups (Unique)</text>
+  </g>
+</svg>
+  
 <h2>Calendly Booked Calls</h2>
 <div class="section-desc">Source of truth: Calendly export. "Booked" counts rows whose <em>created date</em> falls in the window; "Held" counts rows whose <em>start date</em> falls in the window (excluding cancellations and no-shows).</div>
 <div class="kpi-row">
@@ -371,7 +392,7 @@
   <thead><tr><th style="width:112px;">Preview</th><th>Ad Name</th><th class="text-right">Spend</th><th class="text-right">Impressions</th><th class="text-right">CTR</th><th class="text-right">CPC</th><th class="text-right">Booked Calls</th><th class="text-right">Cost / Call</th></tr></thead>
   <tbody>
     <tr>
-      <td><img src="https://external-ord5-1.xx.fbcdn.net/emg1/v/t13/9389886321356687339?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQKH54KPxmFm0U-pQaU0kNGd92V4eIrf9gaqZWVn8dOmR9muN3gV_7Gxx1lm16R4qj-qYDF-SEuZRUdEGy9G6hKi7dRtJu3J4_F8GK-FiVtluocYbDUhW8JxeGJQbLS0sn7uzz6eJ-BG7BgOevfPjrNH&amp;fb_obo=1&amp;utld=facebook.com&amp;stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&amp;edm=AAwGEdEEAAAA&amp;_nc_gid=1t9vv1Td49jcmP5mOBvt2A&amp;_nc_oc=Adp4gKD7w1o-cac6z-tA3oGyO5Rmg5XZEhun8TabaWyC2vaP-UICj53nkQuJyYl5dXsNGruMvyvmjFzMMe_uam5x&amp;ccb=13-1&amp;oh=06_Q3-_ARjIv3xHYwg5p0EliQXWS_pTrWAfMJpb6M58W68zh6Sy&amp;oe=6A216AF9&amp;_nc_sid=58080a" alt="" style="width:96px;height:96px;object-fit:cover;border-radius:6px;border:1px solid var(--card-border);" /></td>
+      <td><img src="https://external-ord5-1.xx.fbcdn.net/emg1/v/t13/9389886321356687339?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQKH54KPxmFm0U-pQaU0kNGd92V4eIrf9gaqZWVn8dOmR9muN3gV_7Gxx1lm16R4qj-qYDF-SEuZRUdEGy9G6hKi7dRtJu3J4_F8GK-FiVtluocYbDUhW8JxeGJQbLS0sn7uzz6eJ-BG7BgOevfPjrNH&amp;fb_obo=1&amp;utld=facebook.com&amp;stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&amp;edm=AAwGEdEEAAAA&amp;_nc_gid=IizfMllJfI5PUCPOQZXBjg&amp;_nc_oc=Adp4gKD7w1o-cac6z-tA3oGyO5Rmg5XZEhun8TabaWyC2vaP-UICj53nkQuJyYl5dXsNGruMvyvmjFzMMe_uam5x&amp;ccb=13-1&amp;oh=06_Q3-_AeHWoXpQzTKyuO-Qrx4uWAUnSU-YYRuE6knVeXpYu4Io&amp;oe=6A21A339&amp;_nc_sid=58080a" alt="" style="width:96px;height:96px;object-fit:cover;border-radius:6px;border:1px solid var(--card-border);" /></td>
       <td>Ad 97 | Image | Static | Demo Lead | Websites for Mortgage Pros Text Overlay | H - Multiple | P - Multiple | Free Demo | OG</td>
       <td class="text-right val-blue">$1,574</td>
       <td class="text-right">25,675</td>
@@ -381,7 +402,7 @@
       <td class="text-right">$225</td>
     </tr>
     <tr>
-      <td><img src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-1/327259306_6001308806559092_2296868076892314710_n.png?_nc_cat=100&amp;ccb=1-7&amp;_nc_ohc=i6CDOB7bSMoQ7kNvwGn3a5G&amp;_nc_oc=AdrkrGqDAbUrI2hG1l4SbR_jRDq3BN1ZO637QilvDxluiPAT0nsiQ5cH7Mi8W5mWmHUVwguQ54wGvJc6i23_4YWA&amp;_nc_zt=24&amp;_nc_ht=scontent-ord5-3.xx&amp;edm=AAwGEdEEAAAA&amp;_nc_gid=cy3eyzpQ9WRyvPuK5Rs82g&amp;_nc_tpa=Q5bMBQGTtI4cpj8gkj2lBNhSg59cewcfExbhXgw3i3um5lMh8wAXdUUubrv2MItiG204GXH64j_BAmN2&amp;stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&amp;ur=68aae3&amp;_nc_sid=58080a&amp;oh=00_Af_WBP6tBmqOYjNTKKbNmC1Bi5AJYAbdM61_Aul53n5yUA&amp;oe=6A25673C" alt="" style="width:96px;height:96px;object-fit:cover;border-radius:6px;border:1px solid var(--card-border);" /></td>
+      <td><img src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-1/327259306_6001308806559092_2296868076892314710_n.png?_nc_cat=100&amp;ccb=1-7&amp;_nc_ohc=i6CDOB7bSMoQ7kNvwGn3a5G&amp;_nc_oc=AdrkrGqDAbUrI2hG1l4SbR_jRDq3BN1ZO637QilvDxluiPAT0nsiQ5cH7Mi8W5mWmHUVwguQ54wGvJc6i23_4YWA&amp;_nc_zt=24&amp;_nc_ht=scontent-ord5-3.xx&amp;edm=AAwGEdEEAAAA&amp;_nc_gid=BpEHfEuG5ZFZsAQwtA3Pdw&amp;_nc_tpa=Q5bMBQGkwB6zXigmQQaDxA9rHNMWcZff7DP0QCE1JX5WX2cgPY_BSk_YJbl3rse-WB_L6stH4ltEFE1K&amp;stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&amp;ur=68aae3&amp;_nc_sid=58080a&amp;oh=00_Af8gIh2_Zs4BwRmJEdKcHE8-pzZUnbqaSjLHL6Y5_P8U-Q&amp;oe=6A25673C" alt="" style="width:96px;height:96px;object-fit:cover;border-radius:6px;border:1px solid var(--card-border);" /></td>
       <td>Ad 109 | Video | Static | Book Call | email screenshot on saving time | Free Demo | OG</td>
       <td class="text-right val-blue">$1,075</td>
       <td class="text-right">24,471</td>
@@ -391,7 +412,7 @@
       <td class="text-right">$269</td>
     </tr>
     <tr>
-      <td><img src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-1/327259306_6001308806559092_2296868076892314710_n.png?_nc_cat=100&amp;ccb=1-7&amp;_nc_ohc=i6CDOB7bSMoQ7kNvwGn3a5G&amp;_nc_oc=AdrkrGqDAbUrI2hG1l4SbR_jRDq3BN1ZO637QilvDxluiPAT0nsiQ5cH7Mi8W5mWmHUVwguQ54wGvJc6i23_4YWA&amp;_nc_zt=24&amp;_nc_ht=scontent-ord5-3.xx&amp;edm=AAwGEdEEAAAA&amp;_nc_gid=WwwDlLUp04_vQzq2sI6tfQ&amp;_nc_tpa=Q5bMBQGg86Ij15UI0CucXRKkP07XA7InNlEB0T5YfmcNegL-Wxy8NNxhKmCI9nIZsJ6_ZPgEji0jGnVC&amp;stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&amp;ur=68aae3&amp;_nc_sid=58080a&amp;oh=00_Af8spAXl0N_QHFtlNHTZjSzQ_BvtzexJazu2afdI24BiqA&amp;oe=6A25673C" alt="" style="width:96px;height:96px;object-fit:cover;border-radius:6px;border:1px solid var(--card-border);" /></td>
+      <td><img src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-1/327259306_6001308806559092_2296868076892314710_n.png?_nc_cat=100&amp;ccb=1-7&amp;_nc_ohc=i6CDOB7bSMoQ7kNvwGn3a5G&amp;_nc_oc=AdrkrGqDAbUrI2hG1l4SbR_jRDq3BN1ZO637QilvDxluiPAT0nsiQ5cH7Mi8W5mWmHUVwguQ54wGvJc6i23_4YWA&amp;_nc_zt=24&amp;_nc_ht=scontent-ord5-3.xx&amp;edm=AAwGEdEEAAAA&amp;_nc_gid=MHVS1u1eVWP8golieggZbQ&amp;_nc_tpa=Q5bMBQH0PvHpjU1O-h6Jw_j2Sz1rObpweeoPwlBfXQDdrjIgQbzPW3JQ8VCUS9PJiBXfw8FBb0wtfQvT&amp;stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&amp;ur=68aae3&amp;_nc_sid=58080a&amp;oh=00_Af96FAjjUT_92PS8wrw0ROOP0XodHNhnzaCQRrqs9zhT6g&amp;oe=6A25673C" alt="" style="width:96px;height:96px;object-fit:cover;border-radius:6px;border:1px solid var(--card-border);" /></td>
       <td>Ad 110 | Video | Static | Book Call | email screenshot on saving time | Free Demo | OG</td>
       <td class="text-right val-blue">$524</td>
       <td class="text-right">3,612</td>
@@ -401,7 +422,7 @@
       <td class="text-right">$262</td>
     </tr>
     <tr>
-      <td><img src="https://scontent-ord5-1.xx.fbcdn.net/v/t15.13418-10/485854134_2798689447185511_8364527957390820331_n.jpg?_nc_cat=101&amp;ccb=1-7&amp;_nc_ohc=qtxn9uBF6xIQ7kNvwEhbMRY&amp;_nc_oc=AdpamuClPOj0kgl9kxi4AGOnEZ9rP9VUgtd_ykCTcEF3hYWC60AT-LMWqUjjtmbAX_Lx7j0EceNFf3Umr8wzJry6&amp;_nc_zt=23&amp;_nc_ht=scontent-ord5-1.xx&amp;edm=AAwGEdEEAAAA&amp;_nc_gid=RCXWMG6YOgZpsiKxFT5W-A&amp;_nc_tpa=Q5bMBQFkPj8QFfxZkm5fLoy6s96J1G6YAtpjNZXqagAIxzHpOxmltm8TexX6EKoxBNKvY9z-RL4Hai7n&amp;stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&amp;ur=aaa768&amp;_nc_sid=58080a&amp;oh=00_Af_Pzo2uUQYOXSwfhSjcKRao41FOEq5VwRIcAD1o0G0j0A&amp;oe=6A257FBE" alt="" style="width:96px;height:96px;object-fit:cover;border-radius:6px;border:1px solid var(--card-border);" /></td>
+      <td><img src="https://scontent-ord5-1.xx.fbcdn.net/v/t15.13418-10/485854134_2798689447185511_8364527957390820331_n.jpg?_nc_cat=101&amp;ccb=1-7&amp;_nc_ohc=qtxn9uBF6xIQ7kNvwEhbMRY&amp;_nc_oc=AdpamuClPOj0kgl9kxi4AGOnEZ9rP9VUgtd_ykCTcEF3hYWC60AT-LMWqUjjtmbAX_Lx7j0EceNFf3Umr8wzJry6&amp;_nc_zt=23&amp;_nc_ht=scontent-ord5-1.xx&amp;edm=AAwGEdEEAAAA&amp;_nc_gid=IqGuarTg0tbq5YVFyni61A&amp;_nc_tpa=Q5bMBQGJxN47ICubQNlUuDCXHtxFKqOqvoy5CR_CODfpY4TFBp1rljijr8ZETzHO6ypqGKg2bIR5Cb0W&amp;stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&amp;ur=aaa768&amp;_nc_sid=58080a&amp;oh=00_Af-8wHPi9zCrlJmzOykriL9FIUeWOklVE97DeV5HFnyoHw&amp;oe=6A257FBE" alt="" style="width:96px;height:96px;object-fit:cover;border-radius:6px;border:1px solid var(--card-border);" /></td>
       <td>Ad 11 | Goalee | Video | Static | Search volume for mortgage calculator | H-Multiple | P-Multiple | None | OG</td>
       <td class="text-right val-blue">$367</td>
       <td class="text-right">16,789</td>
@@ -411,7 +432,7 @@
       <td class="text-right">$183</td>
     </tr>
     <tr>
-      <td><img src="https://scontent-ord5-3.xx.fbcdn.net/v/t15.5256-10/649137222_1437241054466192_3326734567883121572_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_ohc=n0twRB901-YQ7kNvwGbgDdx&amp;_nc_oc=AdqDpBPnxWiD4ZjjC7gCt3Da-Xt8myS8Ib8woW4xSzx1c8kabOhKIn5GmjTZ8EIXxC8ZfJVYsrPQkhbTwI5f4Sq1&amp;_nc_zt=23&amp;_nc_ht=scontent-ord5-3.xx&amp;edm=AAwGEdEEAAAA&amp;_nc_gid=lJZWrVh2bqCQCisUN8U35Q&amp;_nc_tpa=Q5bMBQHIn4iXuYMZXdJzv-mx8SdTzdOo0LExQn2O5IJHgZ8W249n2y8UtP9MeqS-eDyal33xutfScxbN&amp;stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&amp;ur=5fad0e&amp;_nc_sid=58080a&amp;oh=00_Af9yQZg4sJDKpj10oyJ1VAVEkVwpseZ8fKpsOHEkoMLb1g&amp;oe=6A258591" alt="" style="width:96px;height:96px;object-fit:cover;border-radius:6px;border:1px solid var(--card-border);" /></td>
+      <td><img src="https://scontent-ord5-3.xx.fbcdn.net/v/t15.5256-10/649137222_1437241054466192_3326734567883121572_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_ohc=n0twRB901-YQ7kNvwGbgDdx&amp;_nc_oc=AdqDpBPnxWiD4ZjjC7gCt3Da-Xt8myS8Ib8woW4xSzx1c8kabOhKIn5GmjTZ8EIXxC8ZfJVYsrPQkhbTwI5f4Sq1&amp;_nc_zt=23&amp;_nc_ht=scontent-ord5-3.xx&amp;edm=AAwGEdEEAAAA&amp;_nc_gid=F3Xt9mJAucOTwtpbE0i2mA&amp;_nc_tpa=Q5bMBQF99kTgApmiMkFy55Bqq1i4RzEG44wEQJ7353kNb-EmUTt8okD4AlPDMHulqCDq6pdtMKdGXqbD&amp;stp=c0.5000x0.5000f_dst-emg0_p64x64_q75_tt6&amp;ur=5fad0e&amp;_nc_sid=58080a&amp;oh=00_Af_01hKE89jMEyUxBl9HHECmBEQdcytYOpo1A3u4JDiZrg&amp;oe=6A258591" alt="" style="width:96px;height:96px;object-fit:cover;border-radius:6px;border:1px solid var(--card-border);" /></td>
       <td>Ad 104 | Video | Static | Book Call | Authority Plan and ai in the car | Free Demo | OG</td>
       <td class="text-right val-blue">$691</td>
       <td class="text-right">5,086</td>
