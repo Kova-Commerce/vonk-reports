@@ -1,0 +1,12 @@
+{
+  "mode": "weekly",
+  "label": "Jun 29 – Jul 5, 2026",
+  "windowStart": "2026-06-29",
+  "windowEnd": "2026-07-05",
+  "spend": 1443.486741,
+  "netBookedCalls": 9,
+  "signups": 3,
+  "costPerCall": 160.38741566666667,
+  "costPerSignup": 481.162247,
+  "generatedAt": "2026-07-06T18:58:04.413Z"
+}

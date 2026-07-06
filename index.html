@@ -248,6 +248,19 @@
   .glow-cyan   { text-shadow: 0 0 8px rgba(34,211,238,0.6); }
   .glow-violet { text-shadow: 0 0 8px rgba(34,211,238,0.6); }
 
+  /* ── MOBILE (shared shell rules; process in report-responsive-qa skill) ── */
+  @media (max-width: 600px) {
+    body { padding: 18px 12px; }
+    h1 { font-size: 1.5rem; letter-spacing: 0.08em; }
+    .report-header { padding: 14px 4px; gap: 10px; }
+    .report-header .report-meta { font-size: 0.7rem; }
+    .card { padding: 14px 12px; overflow-x: auto; }  /* wide tables scroll inside the card instead of bleeding */
+    table { font-size: 0.75rem; }
+    th, td { padding: 8px 8px !important; }
+    .kpi-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .report-footer { flex-wrap: wrap; gap: 4px 16px; }
+  }
+
   /* ── PRINT / PDF ── */
   @media print {
     body { background: #131316; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -274,7 +287,7 @@
   <div class="report-meta">
     <div style="font-weight:600; color:var(--text-primary);">Performance Reports</div>
     <div>Vonk Digital</div>
-    <div>June 2, 2026</div>
+    <div>July 6, 2026</div>
   </div>
 </div>
   <h1>Vonk Digital — Reports</h1>
@@ -284,19 +297,19 @@
   <div class="kpi-row">
     <div class="kpi-box">
       <div class="kpi-label">Most Recent Week</div>
-      <div class="kpi-value"><a href="weekly/vonk-weekly-2026-05-25-to-2026-05-31.html" style="color:var(--kova-azure);text-decoration:none;">May 25 – May 31, 2026 →</a></div>
+      <div class="kpi-value"><a href="weekly/vonk-weekly-2026-06-29-to-2026-07-05.html" style="color:var(--kova-azure);text-decoration:none;">Jun 29 – Jul 5, 2026 →</a></div>
     </div>
     <div class="kpi-box">
       <div class="kpi-label">Most Recent Month</div>
-      <div class="kpi-value"><a href="monthly/vonk-monthly-2026-05.html" style="color:var(--kova-azure);text-decoration:none;">May 2026 →</a></div>
+      <div class="kpi-value"><a href="monthly/vonk-monthly-2026-06.html" style="color:var(--kova-azure);text-decoration:none;">June 2026 →</a></div>
     </div>
   </div>
 
   <h2>Weekly Archive</h2>
-  <ul class="report-list"><li><a href="weekly/vonk-weekly-2026-05-25-to-2026-05-31.html">May 25 – May 31, 2026</a></li></ul>
+  <ul class="report-list"><li><a href="weekly/vonk-weekly-2026-06-29-to-2026-07-05.html">Jun 29 – Jul 5, 2026</a></li><li><a href="weekly/vonk-weekly-2026-06-22-to-2026-06-28.html">Jun 22 – Jun 28, 2026</a></li><li><a href="weekly/vonk-weekly-2026-06-15-to-2026-06-21.html">Jun 15 – Jun 21, 2026</a></li><li><a href="weekly/vonk-weekly-2026-06-08-to-2026-06-14.html">Jun 8 – Jun 14, 2026</a></li><li><a href="weekly/vonk-weekly-2026-06-01-to-2026-06-07.html">Jun 1 – Jun 7, 2026</a></li><li><a href="weekly/vonk-weekly-2026-05-25-to-2026-05-31.html">May 25 – May 31, 2026</a></li></ul>
 
   <h2>Monthly Archive</h2>
-  <ul class="report-list"><li><a href="monthly/vonk-monthly-2026-05.html">May 2026</a></li></ul>
+  <ul class="report-list"><li><a href="monthly/vonk-monthly-2026-06.html">June 2026</a></li><li><a href="monthly/vonk-monthly-2026-05.html">May 2026</a></li></ul>
 
   
 <div class="report-footer">
