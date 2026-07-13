@@ -1,12 +1,12 @@
 {
   "mode": "weekly",
-  "label": "Jun 29 – Jul 5, 2026",
-  "windowStart": "2026-06-29",
-  "windowEnd": "2026-07-05",
-  "spend": 1443.486741,
-  "netBookedCalls": 9,
-  "signups": 3,
-  "costPerCall": 160.38741566666667,
-  "costPerSignup": 481.162247,
-  "generatedAt": "2026-07-06T18:58:04.413Z"
+  "label": "Jul 6 – Jul 12, 2026",
+  "windowStart": "2026-07-06",
+  "windowEnd": "2026-07-12",
+  "spend": 1341.840777,
+  "netBookedCalls": 4,
+  "signups": 4,
+  "costPerCall": 335.46019425,
+  "costPerSignup": 335.46019425,
+  "generatedAt": "2026-07-13T14:00:06.215Z"
 }
